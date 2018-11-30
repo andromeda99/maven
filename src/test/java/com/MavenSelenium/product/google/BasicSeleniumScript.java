@@ -3,6 +3,7 @@ package com.MavenSelenium.product.google;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -13,14 +14,14 @@ public class BasicSeleniumScript {
 	@Test
 	public void testingFirefoxScript() throws InterruptedException{	
 		
-		System.setProperty("webdriver.gecko.driver", 
-				"D:\\Training\\TrainingContent\\SeleniumJars_Software"
-				+ "\\geckodriver-v0.18.0-win64\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", 
+				"F:\\selenium class\\chromedriver_win32_B39\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
 		
 		driver.get("https://www.seleniumhq.org/");
 		
-		Thread.sleep(15000);
+		Thread.sleep(7000);
 		driver.findElement(By.xpath("//div/ul/li/a[@title='Selenium Projects']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div/ul/li/a[@title='Get Selenium']")).click();
@@ -52,13 +53,23 @@ public class BasicSeleniumScript {
 		
 	}
 	
+	@Test
+	public void testingFirefoxScript1() throws InterruptedException{	
+		
+		System.setProperty("webdriver.chrome.driver", 
+				"F:\\selenium class\\chromedriver_win32_B39\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://facebook.com");
+
+	}
+	
 	
 	@Test
 	public void testMethod() throws InterruptedException{
-		System.setProperty("webdriver.gecko.driver", 
-				"D:\\Training\\TrainingContent\\SeleniumJars_Software"
-				+ "\\geckodriver-v0.18.0-win64\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", 
+				"F:\\selenium class\\chromedriver_win32_B39\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
 		
 		driver.get("http://demo.automationtesting.in/Register.html");
 		Thread.sleep(3000);

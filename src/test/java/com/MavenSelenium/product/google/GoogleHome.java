@@ -2,14 +2,15 @@ package com.MavenSelenium.product.google;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.MavenSelenium.core.BasePageSolvent;
 
-public class GoogleHome extends BasePageSolvent{
-		
+
+public class GoogleHome{
+
 	
 	@Test
 	public void searchStringInGoogle(){//(String searchValue, WebDriver driver){
@@ -28,14 +29,13 @@ public class GoogleHome extends BasePageSolvent{
 	@Test
 	public void testingFirefoxScript() throws InterruptedException{	
 		
-		System.setProperty("webdriver.gecko.driver", 
-				"D:\\Training\\TrainingContent\\SeleniumJars_Software"
-				+ "\\geckodriver-v0.18.0-win64\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", 
+				"F:\\selenium class\\chromedriver_win32_B39\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.seleniumhq.org/");
 		
-		Thread.sleep(15000);
+		Thread.sleep(7000);
 		driver.findElement(By.xpath("//div/ul/li/a[@title='Selenium Projects']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div/ul/li/a[@title='Get Selenium']")).click();
