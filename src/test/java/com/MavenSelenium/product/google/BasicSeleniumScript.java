@@ -59,7 +59,7 @@ public class BasicSeleniumScript {
 		System.setProperty("webdriver.chrome.driver", 
 				"F:\\selenium class\\chromedriver_win32_B39\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://facebook.com");
+		driver.get("file:///C:/Users/admin/workspace111/MavenSelenium/src/test/java/com/MavenSelenium/resources/index.html");
 
 	}
 	
